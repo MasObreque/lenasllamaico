@@ -1,65 +1,88 @@
+/* Colores de madera y fuego */
+
+/* Color principal (madera) */
+.color-principal {
+  background-color: #964B00; /* Marrón oscuro */
+  color: #FFFFFF; /* Blanco */
+}
+
+/* Color secundario (fuego) */
+.color-secundario {
+  background-color: #FF9900; /* Naranja claro */
+  color: #FFFFFF; /* Blanco */
+}
+
+/* Color de fondo (madera) */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background-color: #F5F5F5; /* Gris claro */
+  font-family: Open Sans, sans-serif;
 }
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-  text-align: center;
-}
+/* Estilos para la página de inicio */
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.inicio {
+  background-image: url('fondo-madera.jpg'); /* Imagen de fondo de madera */
+  background-size: cover;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
-nav li {
-  margin-right: 20px;
+.inicio h1 {
+  color: #FFFFFF; /* Blanco */
+  font-size: 48px;
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
+.inicio p {
+  color: #FFFFFF; /* Blanco */
+  font-size: 18px;
 }
 
-main {
+/* Estilos para la página de contacto */
+
+.contacto {
+  background-color: #964B00; /* Marrón oscuro */
+  padding: 20px;
+}
+
+.contacto h1 {
+  color: #FFFFFF; /* Blanco */
+  font-size: 36px;
+}
+
+.contacto form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2em;
 }
 
-section {
-  background-color: #f7f7f7;
-  padding: 1em;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  margin-top: 0;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-li {
+.contacto label {
+  color: #FFFFFF; /* Blanco */
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1em;
-  text-align: center;
-  clear: both;
+.contacto input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto button {
+  width: 100%;
+  height: 40px;
+  background-color: #FF9900; /* Naranja claro */
+  color: #FFFFFF; /* Blanco */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contacto button:hover {
+  background-color: #FFC107; /* Naranja más claro */
 }
