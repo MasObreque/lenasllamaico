@@ -1,41 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Leñas Llamaico</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leña Seca La Araucanía</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8B4513; /* Color de leña */
+            color: #FFA500; /* Color de fuego */
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .benefits {
+            background-color: #555;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact-form {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .contact-form input, .contact-form select, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #FFA500;
+            color: #222;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Leñas Llamaico">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="inicio">
-      <h1>Leñas Llamaico</h1>
-      <p>Bienvenido a Leñas Llamaico, Calor y confort para tu hogar, proveedor de leña de alta calidad en la región de la Araucanía.</p>
-      <button>Contactanos</button>
-    </section>
-  </main>
-  <footer>
-    <p>Información de contacto:</p>
-    <p>Leñas Llamaico</p>
-    <p>Telefono: 123456789</p>
-    <p>Correo electrónico: [info@(link unavailable)](mailto:info@(link unavailable))</p>
-    <p>Redes sociales:</p>
-    <ul>
-      <li><a href="#">Facebook</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Twitter</a></li>
-    </ul>
-  </footer>
+    <header>
+        <h1>Leña Seca La Araucanía</h1>
+    </header>
+    <main>
+        <h2>Nuestro Producto</h2>
+        <p>Ofrecemos leña de eucaliptus y hualle trozada, ideal para calefacción y cocina.</p>
+        
+        <h3>Leña de Eucaliptus</h3>
+        <div class="benefits">
+            <ul>
+                <li>Alto poder calorífico.</li>
+                <li>Arde lentamente, ideal para mantener el calor por más tiempo.</li>
+                <li>Bajo contenido de humedad.</li>
+            </ul>
+        </div>
+        
+        <h3>Leña de Hualle</h3>
+        <div class="benefits">
+            <ul>
+                <li>Arde rápidamente, perfecta para iniciar fuego.</li>
+                <li>Produce menos cenizas.</li>
+                <li>Aroma agradable al quemarse.</li>
+            </ul>
+        </div>
+
+        <h2>Contacto</h2>
+        <div class="contact-form">
+            <form action="https://formsubmit.co/your-email-here" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="quantity">Cantidad de Leña (mts):</label>
+                <input type="number" id="quantity" name="quantity" required>
+                
+                <label for="wood-type">Tipo de Leña:</label>
+                <select id="wood-type" name="wood-type">
+                    <option value="eucaliptus">Eucaliptus</option>
+                    <option value="hualle">Hualle</option>
+                </select>
+                
+                <label for="address">Dirección:</label>
+                <input type="text" id="address" name="address" required>
+                
+                <label for="phone">Número de Celular:</label>
+                <input type="text" id="phone" name="phone" required>
+                
+                <button type="submit">Enviar</button>
+            </form>
+            <a href="https://wa.me/your-whatsapp-number" target="_blank">Contactar por WhatsApp</a>
+        </div>
+    </main>
 </body>
 </html>
