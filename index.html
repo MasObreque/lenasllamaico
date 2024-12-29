@@ -53,6 +53,18 @@
             cursor: pointer;
         }
     </style>
+    <script>
+        function sendWhatsApp() {
+            var name = document.getElementById('name').value;
+            var quantity = document.getElementById('quantity').value;
+            var woodType = document.getElementById('wood-type').value;
+            var address = document.getElementById('address').value;
+            var phone = document.getElementById('phone').value;
+            var message = `Hola, soy ${name}. Necesito ${quantity} mts de leña de tipo ${woodType}. Mi dirección es ${address}. Mi número de contacto es ${phone}.`;
+            var whatsappURL = `https://wa.me/56998628688?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -82,7 +94,7 @@
 
         <h2>Contacto</h2>
         <div class="contact-form">
-            <form action="https://wa.me/56998628688" method="GET" target="_blank">
+            <form onsubmit="sendWhatsApp(); return false;">
                 <label for="name">Nombre:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -103,7 +115,6 @@
                 
                 <button type="submit">Enviar</button>
             </form>
-            <a href="https://wa.me/56998628688" target="_blank">Contactar por WhatsApp</a>
         </div>
     </main>
 </body>
