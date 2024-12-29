@@ -27,6 +27,11 @@
             border-radius: 10px;
             margin-top: 20px;
         }
+        .benefits img {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
         .contact-form {
             background-color: #333;
             padding: 20px;
@@ -52,6 +57,22 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin: 0 auto;
+        }
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('background-animation.gif') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5;
+        }
     </style>
     <script>
         function sendWhatsApp() {
@@ -60,14 +81,17 @@
             var woodType = document.getElementById('wood-type').value;
             var address = document.getElementById('address').value;
             var phone = document.getElementById('phone').value;
-            var message = `Hola, soy ${name}. Necesito ${quantity} mts de leña de tipo ${woodType}. Mi dirección es ${address}. Mi número de contacto es ${phone}.`;
+            var date = document.getElementById('date').value;
+            var message = `Hola, soy ${name}. Necesito ${quantity} mts de leña de tipo ${woodType} para ${date}. Mi dirección es ${address}. Mi número de contacto es ${phone}.`;
             var whatsappURL = `https://wa.me/56998628688?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, '_blank');
         }
     </script>
 </head>
 <body>
+    <div class="bg-animation"></div>
     <header>
+        <img src="logo.png" alt="Leña's Llamaico Logo" class="logo">
         <h1>Leña's Llamaico</h1>
     </header>
     <main>
@@ -76,23 +100,25 @@
         
         <h3>Leña de Eucaliptus</h3>
         <div class="benefits">
+            <img src="eucaliptus.jpg" alt="Leña de Eucaliptus">
             <ul>
-                <li>Alto poder calorífico.</li>
-                <li>Arde lentamente, ideal para mantener el calor por más tiempo.</li>
-                <li>Bajo contenido de humedad.</li>
+                <li>Alto poder calorífico, ideal para mantener tu hogar cálido.</li>
+                <li>Arde lentamente, proporcionando calor por más tiempo.</li>
+                <li>Bajo contenido de humedad, asegurando una combustión eficiente.</li>
             </ul>
         </div>
         
         <h3>Leña de Hualle</h3>
         <div class="benefits">
+            <img src="hualle.jpg" alt="Leña de Hualle">
             <ul>
-                <li>Arde rápidamente, perfecta para iniciar fuego.</li>
-                <li>Produce menos cenizas.</li>
-                <li>Aroma agradable al quemarse.</li>
+                <li>Arde rápidamente, perfecta para iniciar fuego de manera rápida y fácil.</li>
+                <li>Produce menos cenizas, facilitando la limpieza después de su uso.</li>
+                <li>Aroma agradable al quemarse, creando un ambiente acogedor.</li>
             </ul>
         </div>
 
-        <h2>Contacto</h2>
+        <h2>Haz tu pedido Aquí</h2>
         <div class="contact-form">
             <form onsubmit="sendWhatsApp(); return false;">
                 <label for="name">Nombre:</label>
@@ -101,21 +127,4 @@
                 <label for="quantity">Cantidad de Leña (mts):</label>
                 <input type="number" id="quantity" name="quantity" required>
                 
-                <label for="wood-type">Tipo de Leña:</label>
-                <select id="wood-type" name="wood-type">
-                    <option value="eucaliptus">Eucaliptus</option>
-                    <option value="hualle">Hualle</option>
-                </select>
-                
-                <label for="address">Dirección:</label>
-                <input type="text" id="address" name="address" required>
-                
-                <label for="phone">Número de Celular:</label>
-                <input type="text" id="phone" name="phone" required>
-                
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </main>
-</body>
-</html>
+                <label for="wood-type">
